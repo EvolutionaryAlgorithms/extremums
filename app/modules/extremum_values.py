@@ -13,7 +13,7 @@ class ExtremumValues:
                     ext_value = value
                     element = gen[i]
         if print_el:
-            print("Element: ", element)
+            print("Element:", element)
         return ext_value
 
     @staticmethod

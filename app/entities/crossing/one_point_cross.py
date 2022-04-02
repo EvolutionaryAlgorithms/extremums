@@ -16,7 +16,7 @@ class OnePointCross(Crossing):
             self.child2 += self.mom[j]
 
     def __new_generation(self, father):
-        crossing_point = random.randrange(1, 6)
+        crossing_point = random.randrange(1, 8)
         print("Cross Point: ", crossing_point)
         binary_population = {}
         new_generation = []
@@ -30,19 +30,27 @@ class OnePointCross(Crossing):
             if binary_population[i][0:1] == "-" and binary_population[i + 1][0:1] == "-":
                 remove_binary = self.remove_binary_when_minus_minus
                 add_binary = self.when_minus_minus
-                self.make_crossing(remove_binary, binary_population, i, crossing_point, temporary_generation, init_child, add_binary)
+                self.make_crossing(
+                    remove_binary, binary_population, i, crossing_point, temporary_generation, init_child, add_binary
+                )
             elif binary_population[i][0:1] == "-" and binary_population[i + 1][0:1] != "-":
                 remove_binary = self.remove_binary_when_minus_plus
                 add_binary = self.when_minus_plus
-                self.make_crossing(remove_binary, binary_population, i, crossing_point, temporary_generation, init_child, add_binary)
+                self.make_crossing(
+                    remove_binary, binary_population, i, crossing_point, temporary_generation, init_child, add_binary
+                )
             elif binary_population[i][0:1] != "-" and binary_population[i + 1][0:1] == "-":
                 remove_binary = self.remove_binary_when_plus_minus
                 add_binary = self.when_plus_minus
-                self.make_crossing(remove_binary, binary_population, i, crossing_point, temporary_generation, init_child, add_binary)
+                self.make_crossing(
+                    remove_binary, binary_population, i, crossing_point, temporary_generation, init_child, add_binary
+                )
             else:
                 remove_binary = self.remove_binary_when_plus_plus
                 add_binary = self.when_plus_plus
-                self.make_crossing(remove_binary, binary_population, i, crossing_point, temporary_generation, init_child, add_binary)
+                self.make_crossing(
+                    remove_binary, binary_population, i, crossing_point, temporary_generation, init_child, add_binary
+                )
         for i in range(len(temporary_generation)):
             new_generation.append(int(temporary_generation[i], 2))
         return new_generation

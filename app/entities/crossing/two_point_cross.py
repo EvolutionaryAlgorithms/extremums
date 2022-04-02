@@ -19,10 +19,10 @@ class TwoPointCross(Crossing):
             self.child2 += self.dad[j]
 
     def __new_generation(self, father):
-        temporary_point_1 = random.randrange(1, 6)
-        temporary_point_2 = random.randrange(1, 6)
+        temporary_point_1 = random.randrange(1, 8)
+        temporary_point_2 = random.randrange(1, 8)
         while temporary_point_1 == temporary_point_2:
-            temporary_point_2 = random.randrange(1, 6)
+            temporary_point_2 = random.randrange(1, 8)
         crossing_points = [temporary_point_1, temporary_point_2]
         crossing_points.sort()
         print("Cross Points: ", crossing_points)

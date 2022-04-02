@@ -18,7 +18,7 @@ class MaskCross(Crossing):
 
     def __new_generation(self, father):
         mask = ""
-        for i in range(6):
+        for i in range(8):
             mask += "".join(str(random.randrange(0, 2)))
         print("crossing mask: ", mask)
         binary_population = {}

@@ -10,6 +10,7 @@ class Selective(Population):
     def make_gen_selective(self):
         generation = []
         length = 8
+
         for i in range(length):
             generation.append(random.randrange(self.minimum, self.maximum))
         return generation
