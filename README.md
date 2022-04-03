@@ -1,5 +1,5 @@
-# Genetics Algoritms
-### Find the extremes of the function
+# Extremums
+### Find the extremums of the function
 Can work with sets of numbers of dimension 2 ^ n.  
 Work with negative numbers was also implemented, but not tested
 ***
